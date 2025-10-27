@@ -1,0 +1,205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.25584177638139, 37.86576232627323]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "First Church of Christ, Scientist",
+        "Address": "2619 Dwight Way",
+        "Architect + Date": "Bernard Maybeck (1910)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/1christ_scientist.html",
+        "Designated": "15-Dec-75",
+        "Notes": "#77000283, National Historic Landmark (22 Dec 1977)"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "Church of the Good Shepherd, Episcopal",
+        "Address": "1823 Ninth Street, Berkeley, CA",
+        "Architect + Date": "Charles L. Bugbee (1878)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/good_shepherd.html",
+        "Designated": "15-Dec-75",
+        "Notes": "#86003361, National Register of Historic Places (1986)"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "St. John’s Presbyterian Church",
+        "Address": "2640 College Avenue, Berkeley, CA",
+        "Architect + Date": "Julia Morgan (1908, 1910)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/st._johns_presb.html",
+        "Designated": "15-Dec-75",
+        "Notes": "#74000507, National Register of Historic Places (1974)"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "Golden Sheaf Bakery",
+        "Address": "2071 Addison Street, Berkeley, CA",
+        "Architect + Date": "Clinton Day (1905)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/golden_sheaf.html",
+        "Designated": "17-Oct-77",
+        "Notes": "#78000644, National Register of Historic Places (1978)"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "First Unitarian Church",
+        "Address": "2401 Bancroft Way, Berkeley, CA",
+        "Architect + Date": "Albert Cicero Schweinfurth (1898)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/1unitarian.html",
+        "Designated": "16-Nov-81",
+        "Notes": "#81000143, National Register of Historic Places (1981)"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "Shattuck Hotel",
+        "Address": "2200 Shattuck Avenue, Berkeley, CA",
+        "Architect + Date": "Benjamin G. McDougall (1909–13)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/shattuck_hotel.html",
+        "Designated": "16-May-83 & 9-Nov-87",
+        "Notes": "CA State Historic Resources Inventory Designation expanded in 1987 to include entire block."
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "Thornburg/Normandy Village",
+        "Address": "1781 Spruce Street, Berkeley, CA",
+        "Architect + Date": "William Raymond Yelland (1926); Jack W. Thornburg (1927–1928); Charles E.J. Rogers (1941–1955)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/thornburg.html",
+        "Designated": "19-Dec-83",
+        "Notes": "CA State Historic Resources Inventory"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "Manasse-Block Tanning Co.",
+        "Address": "1300 Fourth Street at Gilman Street",
+        "Architect + Date": "(1898, 1905, 1906, 1922, 1937)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/manasse_block.html",
+        "Designated": "21-Apr-86",
+        "Notes": ""
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "Kawneer Manufacturing Co.",
+        "Address": "2547 Eighth Street, Berkeley, CA",
+        "Architect + Date": "Chester H. Miller (1913); Alben Froberg (1947–1950)",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/landmarks101-200.html",
+        "Designated": "21-Jul-86",
+        "Notes": ""
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Landmark": "McCreary-Greer House",
+        "Address": "2318 Durant Avenue",
+        "Architect + Date": "Cornelius S. McNally or Barker Estey [?] (1901)",
+        "Link": "https://berkeleyheritage.com/mccreary-greer.html",
+        "Designated": "21-Jul-86",
+        "Notes": "CA State Historic Resources Inventory"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.29464558052783, 37.870481290531174]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.2538720444596, 37.86239383612552]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.26902058052681, 37.871374401569]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.2525050444601, 37.86972582032293]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.26824458052764, 37.869205989556335]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.26528550839228, 37.87562833635384]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.30365957846337, 37.87855338907016]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.29237177642658, 37.859725841876454]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.2624850444597, 37.86726124226203]
+      }
+    }
+  ]
+}
