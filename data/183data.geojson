@@ -1,14 +1,4 @@
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-122.25584177638139, 37.86576232627323]
-      }
-    },
+
     {
       "type": "Feature",
       "properties": {
@@ -128,6 +118,17 @@
         "Notes": "CA State Historic Resources Inventory"
       },
       "geometry": null
+    },
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.25584177638139, 37.86576232627323]
+      }
     },
     {
       "type": "Feature",
