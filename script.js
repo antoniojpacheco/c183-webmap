@@ -29,7 +29,6 @@ map.on('load', function() {
           // Get coordinates/geometry
           const coordinates = e.features[0].geometry.coordinates.slice();
           const properties = e.features[0].properties;
-          console.log(properties);
 
           // Create popup content using the properties from the data
            const popupContent = `
