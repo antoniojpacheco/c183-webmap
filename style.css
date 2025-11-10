@@ -30,18 +30,21 @@ body {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 #header h2 {
   font-size: 16px;
   margin: 6px 0 0;
   font-weight: 600;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 #header h3 {
   font-size: 12px;
   margin: 4px 0 0;
   font-weight: 500;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 /* Responsive header for mobile */
