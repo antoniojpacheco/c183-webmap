@@ -1,10 +1,7 @@
-/* General Reset + Typography */
+/* Reset and map layout */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
-  background: #000; /* dark map backdrop */
-  color: #111;
 }
 
 #map {
@@ -14,114 +11,151 @@ body {
   width: 100%;
 }
 
-/* --- Title --- */
-#mapTitle {
+/* Header overlay */
+#header {
   position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 1000;
   background: rgba(255, 255, 255, 0.9);
-  padding: 14px 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  backdrop-filter: blur(6px);
-}
-
-#mapTitle h1 {
-  font-size: 22px;
-  margin: 0 0 4px 0;
-  font-weight: 600;
-  color: #111;
-}
-
-#mapTitle h2 {
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
-  opacity: 0.7;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #333;
 }
 
-/* --- Legend --- */
-#legend {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 12px 16px;
-  border-radius: 10px;
-  font-size: 13px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  line-height: 1.6;
-  backdrop-filter: blur(6px);
+/* Title styles */
+#header h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
 }
 
-#legend h3 {
-  margin: 0 0 8px 0;
-  font-size: 14px;
-  color: #00bfa6;
+#header h2 {
+  font-size: 16px;
+  margin: 6px 0 0;
   font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+#header h3 {
+  font-size: 12px;
+  margin: 4px 0 0;
+  font-weight: 500;
 }
 
-.legend-color {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 1px solid #999;
+/* Responsive header for mobile */
+@media (max-width: 600px) {
+  #header {
+    padding: 10px 14px;
+  }
+  #header h1 {
+    font-size: 18px;
+  }
+  #header h2 {
+    font-size: 14px;
+  }
+  #header h3 {
+    font-size: 10px;
+  }
 }
 
-.legend-color.default {
-  background: #3b82f6;
-}
-
-.legend-color.hover {
-  background: #ff5f5f;
-}
-
-.legend-color.selected {
-  background: #00bfa6;
-}
-
-/* --- Slider --- */
-#sliderContainer {
+/* Timeline slider */
+#timeline {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 20px;
   background: rgba(255, 255, 255, 0.9);
-  padding: 12px 18px;
-  border-radius: 10px;
-  color: #111;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  backdrop-filter: blur(6px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#sliderContainer label {
-  font-size: 13px;
-  margin-bottom: 6px;
-  color: #00bfa6;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 #yearRange {
   width: 200px;
-  accent-color: #00bfa6;
-  cursor: pointer;
+  margin-top: 5px;
 }
 
-#yearValue {
+/* Legend */
+#legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 10px 14px;
   font-size: 13px;
-  margin-top: 6px;
-  opacity: 0.8;
-  color: #333;
+  line-height: 1.4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+#legend h4 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#legend div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+#legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+/* Popup styling */
+.mapboxgl-popup-content {
+  font-family: 'Inter', sans-serif;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mapboxgl-popup-content h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #2b3d52;
+  font-weight: 600;
+}
+
+.mapboxgl-popup-content p {
+  margin: 3px 0;
+  line-height: 1.3em;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.popup-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.mapboxgl-popup-content a {
+  color: #2a6df4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mapboxgl-popup-content a:hover {
+  text-decoration: underline;
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: #fff !important;
 }
