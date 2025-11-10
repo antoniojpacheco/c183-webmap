@@ -11,7 +11,7 @@
       href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css"
     />
 
-    <!-- Custom CSS -->
+    <!-- My CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -23,13 +23,19 @@
       <h3>Data: Berkeley Architectural Heritage Association</h3>
     </div>
 
+    <!-- Timeline -->
+    <div id="timeline">
+      <label for="yearRange">Filter by Year: <span id="yearValue"></span></label>
+      <input type="range" id="yearRange" min="1850" max="1950" value="1950" step="1">
+    </div>
+
     <!-- Map container -->
     <div id="map"></div>
 
     <!-- Mapbox JS -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
 
-    <!-- Custom JS -->
+    <!-- My JS -->
     <script src="./script.js"></script>
   </body>
 </html>
