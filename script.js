@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW50b25pb2pwYWNoZWNvIiwiYSI6ImNtaDljaXpjeTEycmYybnEzaXdrYThnZG8ifQ.xeHV0ObSbpRUSEwukMU97g';
 
-// Initialize the map
+// Initialize map
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/antoniojpacheco/cmh9cnp3700as01sq5ifrb88c',
@@ -8,14 +8,25 @@ const map = new mapboxgl.Map({
   zoom: 9
 });
 
-map.on('load', function () {
+map.on('load', async function () {
+  // Fetch and preprocess GeoJSON
+  const response = await fetch('https://raw.githubusercontent.com/antoniojpacheco/c183-webmap/refs/heads/main/data/183data.geojson');
+  const geojson = await response.json();
+
+  // Add unique IDs + extract year
+  geojson.features.forEach((f, i) => {
+    f.id = i;
+    const match = f.properties["Architect + Date"].match(/\d{4}/);
+    f.properties.year = match ? parseInt(match[0]) : 0;
+  });
+
   // Add GeoJSON source
   map.addSource('points-data', {
     type: 'geojson',
-    data: 'https://raw.githubusercontent.com/antoniojpacheco/c183-webmap/refs/heads/main/data/183data.geojson'
+    data: geojson
   });
 
-  // Add circle layer with hover and click styling
+  // Add circle layer
   map.addLayer({
     id: 'points-layer',
     type: 'circle',
@@ -23,47 +34,33 @@ map.on('load', function () {
     paint: {
       'circle-color': [
         'case',
-        ['boolean', ['feature-state', 'selected'], false], '#0f0', // green if clicked
-        ['boolean', ['feature-state', 'hover'], false], '#f00',     // red on hover
-        '#4264FB'                                                   // default
+        ['boolean', ['feature-state', 'selected'], false], '#0f0',
+        ['boolean', ['feature-state', 'hover'], false], '#f00',
+        '#4264FB'
       ],
       'circle-radius': [
         'case',
-        ['boolean', ['feature-state', 'hover'], false], 10, // bigger on hover
-        6                                                 // default
+        ['boolean', ['feature-state', 'hover'], false], 10,
+        6
       ],
       'circle-stroke-width': 2,
       'circle-stroke-color': '#ffffff'
     }
   });
 
-  // Track hover and selection states
   let hoveredId = null;
   let selectedId = null;
 
-  // -----------------------------
   // Hover effect
-  // -----------------------------
   map.on('mousemove', 'points-layer', (e) => {
     map.getCanvas().style.cursor = 'pointer';
-
     if (e.features.length > 0) {
-      // Reset previous hover if not selected
       if (hoveredId !== null && hoveredId !== selectedId) {
-        map.setFeatureState(
-          { source: 'points-data', id: hoveredId },
-          { hover: false }
-        );
+        map.setFeatureState({ source: 'points-data', id: hoveredId }, { hover: false });
       }
-
       hoveredId = e.features[0].id;
-
-      // Apply hover state if not selected
       if (hoveredId !== selectedId) {
-        map.setFeatureState(
-          { source: 'points-data', id: hoveredId },
-          { hover: true }
-        );
+        map.setFeatureState({ source: 'points-data', id: hoveredId }, { hover: true });
       }
     }
   });
@@ -71,17 +68,12 @@ map.on('load', function () {
   map.on('mouseleave', 'points-layer', () => {
     map.getCanvas().style.cursor = '';
     if (hoveredId !== null && hoveredId !== selectedId) {
-      map.setFeatureState(
-        { source: 'points-data', id: hoveredId },
-        { hover: false }
-      );
+      map.setFeatureState({ source: 'points-data', id: hoveredId }, { hover: false });
     }
     hoveredId = null;
   });
 
-  // -----------------------------
   // Click effect + popup
-  // -----------------------------
   map.on('click', 'points-layer', (e) => {
     const feature = e.features[0];
     const coordinates = feature.geometry.coordinates.slice();
@@ -89,20 +81,13 @@ map.on('load', function () {
 
     // Deselect previous
     if (selectedId !== null) {
-      map.setFeatureState(
-        { source: 'points-data', id: selectedId },
-        { selected: false }
-      );
+      map.setFeatureState({ source: 'points-data', id: selectedId }, { selected: false });
     }
 
-    // Select clicked feature
     selectedId = feature.id;
-    map.setFeatureState(
-      { source: 'points-data', id: selectedId },
-      { selected: true }
-    );
+    map.setFeatureState({ source: 'points-data', id: selectedId }, { selected: true });
 
-    // Build popup content
+    // Popup
     const popupContent = `
       <div>
         <h3>${properties.Landmark}</h3>
@@ -114,10 +99,26 @@ map.on('load', function () {
       </div>
     `;
 
-    // Show popup
     new mapboxgl.Popup()
       .setLngLat(coordinates)
       .setHTML(popupContent)
       .addTo(map);
+  });
+
+  // ------------------------------------------
+  // TIMELINE SLIDER FILTER
+  // ------------------------------------------
+  const slider = document.getElementById('yearRange');
+  const yearValue = document.getElementById('yearValue');
+
+  // Initialize display
+  yearValue.textContent = slider.value;
+
+  slider.addEventListener('input', (e) => {
+    const year = parseInt(e.target.value);
+    yearValue.textContent = year;
+
+    // Filter landmarks built before or in the selected year
+    map.setFilter('points-layer', ['<=', ['get', 'year'], year]);
   });
 });
