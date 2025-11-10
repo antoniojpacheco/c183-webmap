@@ -3,6 +3,7 @@
   "features": [
     {
       "type": "Feature",
+      "id": 1,
       "properties": {
         "Landmark": "First Church of Christ, Scientist",
         "Address": "2619 Dwight Way, Berkeley, CA",
@@ -18,6 +19,7 @@
     },
     {
       "type": "Feature",
+      "id": 2,
       "properties": {
         "Landmark": "Church of the Good Shepherd, Episcopal",
         "Address": "1823 Ninth Street, Berkeley, CA",
@@ -33,6 +35,7 @@
     },
     {
       "type": "Feature",
+      "id": 3,
       "properties": {
         "Landmark": "St. John’s Presbyterian Church",
         "Address": "2640 College Avenue, Berkeley, CA",
@@ -48,6 +51,7 @@
     },
     {
       "type": "Feature",
+      "id": 4,
       "properties": {
         "Landmark": "Golden Sheaf Bakery",
         "Address": "2071 Addison Street, Berkeley, CA",
@@ -63,6 +67,7 @@
     },
     {
       "type": "Feature",
+      "id": 5,
       "properties": {
         "Landmark": "First Unitarian Church",
         "Address": "2401 Bancroft Way, Berkeley, CA",
@@ -78,6 +83,7 @@
     },
     {
       "type": "Feature",
+      "id": 6,
       "properties": {
         "Landmark": "Shattuck Hotel",
         "Address": "2086 Allston Way, Berkeley, CA",
@@ -93,6 +99,7 @@
     },
     {
       "type": "Feature",
+      "id": 7,
       "properties": {
         "Landmark": "Thornburg/Normandy Village",
         "Address": "1781 Spruce Street, Berkeley, CA",
@@ -108,6 +115,7 @@
     },
     {
       "type": "Feature",
+      "id": 8,
       "properties": {
         "Landmark": "Manasse-Block Tanning Co.",
         "Address": "1300 Fourth Street, Berkeley, CA",
@@ -123,6 +131,7 @@
     },
     {
       "type": "Feature",
+      "id": 9,
       "properties": {
         "Landmark": "Kawneer Manufacturing Co.",
         "Address": "2547 Eighth Street, Berkeley, CA",
@@ -138,6 +147,7 @@
     },
     {
       "type": "Feature",
+      "id": 10,
       "properties": {
         "Landmark": "McCreary-Greer House",
         "Address": "2318 Durant Avenue, Berkeley, CA",
