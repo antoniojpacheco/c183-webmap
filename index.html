@@ -17,6 +17,9 @@
 
   <body>
 
+      <!-- Map container -->
+    <div id="map"></div>
+
     <!-- Header overlay -->
     <div id="header">
       <h1>Heritage Map of Berkeley</h1>
@@ -24,6 +27,7 @@
       <h3>Data: Berkeley Architectural Heritage Association</h3>
     </div>
 
+    <!-- Legend -->
     <div id="legend">
       <h4>Legend</h4>
       <div><span style="background:#4264FB;"></span> Historic Landmark</div>
@@ -31,15 +35,11 @@
       <div><span style="background:#0f0;"></span> Selected</div>
     </div>
 
-
     <!-- Timeline -->
     <div id="timeline">
       <label for="yearRange">Filter by Year: <span id="yearValue"></span></label>
       <input type="range" id="yearRange" min="1850" max="1950" value="1950" step="1">
     </div>
-
-    <!-- Map container -->
-    <div id="map"></div>
 
     <!-- Mapbox JS -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
