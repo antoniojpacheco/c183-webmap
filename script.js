@@ -88,16 +88,19 @@ map.on('load', async function () {
     map.setFeatureState({ source: 'points-data', id: selectedId }, { selected: true });
 
     // Popup
-    const popupContent = `
-      <div>
-        <h3>${properties.Landmark}</h3>
-        <p><strong>Address:</strong> ${properties.Address}</p>
-        <p><strong>Architect & Date:</strong> ${properties["Architect + Date"]}</p>
-        <p><strong>Designated:</strong> ${properties.Designated}</p>
-        ${properties.Link ? `<p><a href="${properties.Link}" target="_blank">More Information</a></p>` : ''}
-        ${properties.Notes ? `<p><strong>Notes:</strong> ${properties.Notes}</p>` : ''}
-      </div>
-    `;
+   // Build popup content
+  const popupContent = `
+    <div style="max-width: 250px;">
+      <h3>${properties.Landmark}</h3>
+      ${properties.Image ? `<img src="${properties.Image}" alt="${properties.Landmark}" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">` : ''}
+      <p><strong>Address:</strong> ${properties.Address}</p>
+      <p><strong>Architect & Date:</strong> ${properties["Architect + Date"]}</p>
+      <p><strong>Designated:</strong> ${properties.Designated}</p>
+      ${properties.Link ? `<p><a href="${properties.Link}" target="_blank">More Information</a></p>` : ''}
+      ${properties.Notes ? `<p><strong>Notes:</strong> ${properties.Notes}</p>` : ''}
+    </div>
+  `;
+
 
     new mapboxgl.Popup()
       .setLngLat(coordinates)
@@ -123,4 +126,8 @@ map.on('load', async function () {
   });
   map.addControl(new mapboxgl.NavigationControl(), 'top-right');
   map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
+  map.scrollZoom.enable();
+  map.dragRotate.enable();
+  map.touchZoomRotate.enable();
+  map.easeTo({ pitch: 45, bearing: -20, duration: 2000 });
 });
