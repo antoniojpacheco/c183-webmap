@@ -28,7 +28,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2959868, 37.870325]
+        "coordinates": [-122.29410552978516, 37.86771011352539]
       }
     },
     {
@@ -58,7 +58,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2739319, 37.8712581]
+        "coordinates": [-122.27007293701172, 37.870941162109375]
       }
     },
     {
@@ -73,7 +73,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2637617, 37.868695]
+        "coordinates": [-122.2611771, 37.868688]
       }
     },
     {
@@ -88,7 +88,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2711149, 37.8688158]
+        "coordinates": [-122.27022552490234, 37.86908721923828]
       }
     },
     {
@@ -103,7 +103,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2678491, 37.8754986]
+        "coordinates": [-122.26548767089844, 37.875938415527344]
       }
     },
     {
@@ -118,7 +118,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.3084899, 37.8787799]
+        "coordinates": [-122.3036419, 37.878723]
       }
     },
     {
@@ -127,13 +127,13 @@
         "Landmark": "Kawneer Manufacturing Co.",
         "Address": "2547 Eighth Street, Berkeley, CA",
         "Architect + Date": "Chester H. Miller (1913); Alben Froberg (1947–1950)",
-        "Link": "https://berkeleyheritage.com/berkeley_landmarks/kawneer.html",
+        "Link": "https://berkeleyheritage.com/berkeley_landmarks/landmarks101-200.html",
         "Designated": "21-Jul-86",
         "Notes": ""
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2949059, 37.8592829]
+        "coordinates": [-122.29235076904297, 37.85857391357422]
       }
     },
     {
@@ -148,8 +148,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-122.2650693, 37.8671095]
+        "coordinates": [-122.26387023925781, 37.86717987060547]
       }
     }
   ]
-}
