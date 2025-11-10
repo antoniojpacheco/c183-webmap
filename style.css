@@ -74,3 +74,10 @@ body {
   width: 200px;
   margin-top: 5px;
 }
+
+.mapboxgl-popup-content {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+}
