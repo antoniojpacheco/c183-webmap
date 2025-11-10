@@ -56,28 +56,3 @@ body {
   #header h3 {
     font-size: 10px;
   }
-  
-#legend {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255,255,255,0.9);
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
-}
-
-#legend div {
-  margin-bottom: 5px;
-}
-
-#legend span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
