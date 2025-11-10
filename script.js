@@ -88,19 +88,16 @@ map.on('load', async function () {
     map.setFeatureState({ source: 'points-data', id: selectedId }, { selected: true });
 
     // Popup
-   // Build popup content
-  const popupContent = `
-    <div style="max-width: 250px;">
-      <h3>${properties.Landmark}</h3>
-      ${properties.Image ? `<img src="${properties.Image}" alt="${properties.Landmark}" style="width: 100%; border-radius: 6px; margin-bottom: 8px;">` : ''}
-      <p><strong>Address:</strong> ${properties.Address}</p>
-      <p><strong>Architect & Date:</strong> ${properties["Architect + Date"]}</p>
-      <p><strong>Designated:</strong> ${properties.Designated}</p>
-      ${properties.Link ? `<p><a href="${properties.Link}" target="_blank">More Information</a></p>` : ''}
-      ${properties.Notes ? `<p><strong>Notes:</strong> ${properties.Notes}</p>` : ''}
-    </div>
-  `;
-
+    const popupContent = `
+      <div>
+        <h3>${properties.Landmark}</h3>
+        <p><strong>Address:</strong> ${properties.Address}</p>
+        <p><strong>Architect & Date:</strong> ${properties["Architect + Date"]}</p>
+        <p><strong>Designated:</strong> ${properties.Designated}</p>
+        ${properties.Link ? `<p><a href="${properties.Link}" target="_blank">More Information</a></p>` : ''}
+        ${properties.Notes ? `<p><strong>Notes:</strong> ${properties.Notes}</p>` : ''}
+      </div>
+    `;
 
     new mapboxgl.Popup()
       .setLngLat(coordinates)
