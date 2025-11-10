@@ -121,4 +121,6 @@ map.on('load', async function () {
     // Filter landmarks built before or in the selected year
     map.setFilter('points-layer', ['<=', ['get', 'year'], year]);
   });
+  map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+  map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
 });
