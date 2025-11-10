@@ -11,7 +11,7 @@
       href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css"
     />
 
-    <!-- My CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -23,13 +23,23 @@
       <h3>Data: Berkeley Architectural Heritage Association</h3>
     </div>
 
+    <!-- Legend overlay -->
+    <div id="legend">
+      <div>
+        <span style="background:#f28cb1"></span> Residential
+      </div>
+      <div>
+        <span style="background:#51bbd6"></span> Public
+      </div>
+    </div>
+
     <!-- Map container -->
     <div id="map"></div>
 
     <!-- Mapbox JS -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
 
-    <!-- My JS -->
+    <!-- Custom JS -->
     <script src="./script.js"></script>
   </body>
 </html>
